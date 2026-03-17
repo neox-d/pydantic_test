@@ -1,0 +1,229 @@
+{
+  "profileId": "string",
+  "file": {
+    "name": "string",
+    "file": "string",
+    "fields": [
+      {
+        "id": "string",
+        "name": "string",
+        "type": "string",
+        "value": "string",
+        "checked": true,
+        "multiple": true,
+        "width": "string",
+        "height": "string",
+        "required": true
+      }
+    ],
+    "autoGroupedFieldsFill": false,
+    "additionalFiles": null
+  },
+  "stampSeries": "string",
+  "multipleStampSeries": [
+    {
+      "stampSeries": "string",
+      "seriesQuantity": "string"
+    }
+  ],
+  "seriesGroup": "string",
+  "stampValue": "string",
+  "stampUpload": {
+    "state": "string",
+    "denomination": "string",
+    "firstPartyName": "string",
+    "secondPartyName": "string",
+    "stampSerial": "string",
+    "stampFile": "string"
+  },
+  "revenueStampSeries": "string",
+  "revenueStampQuantity": "string",
+  "neslData": {
+    "documentDetail": {
+      "loanNumber": "string",
+      "sanctionNumber": "string",
+      "registrationType": "string",
+      "state": "string",
+      "branchName": "string",
+      "branchAddress": "string",
+      "dateOfSanction": "string",
+      "emiAmount": "string",
+      "rateOfInterest": "string",
+      "sanctionAmount": "string",
+      "tenure": "string",
+      "typeOfDebt": "string",
+      "accountClosedFlag": "string",
+      "fundType": "string",
+      "sanctionCurrency": "string",
+      "creditSubtype": "string",
+      "facilityName": "string",
+      "amountOverdue": "string",
+      "otherChargeAmount": "string",
+      "debtStartDate": "string",
+      "interestAmount": "string",
+      "oldDebtRefNo": "string",
+      "principalOutstanding": "string",
+      "loanRemark": "string",
+      "totalOutstandingAmount": "string",
+      "creditorBusinessUnit": "string",
+      "drawingPower": "string",
+      "daysPastDue": "string",
+      "docRefNo": "string",
+      "expiryDateEbg": "string",
+      "claimExpiryDate": "string",
+      "contractRefNo": "string",
+      "vendorCode": "string",
+      "portalId": "string",
+      "event": "string"
+    },
+    "stampData": [
+      {
+        "firstParty": "string",
+        "secondParty": "string",
+        "stampDutyAmount": "string",
+        "considerationPrice": "string",
+        "descriptionOfDocument": "string",
+        "stampDutyPaidBy": "string",
+        "articleCode": "string",
+        "firstPartyPin": "string",
+        "secondPartyPin": "string",
+        "firstPartyOVDType": "string",
+        "firstPartyOVDValue": "string",
+        "secondPartyOVDType": "string",
+        "secondPartyOVDValue": "string"
+      }
+    ],
+    "participants": [
+      {
+        "fullName": "string",
+        "contactPersonName": "string",
+        "contactRelation": "string",
+        "emailId": "string",
+        "mobileNumber": "string",
+        "dob": "string",
+        "legalConstitution": "string",
+        "alternateEmailId": "string",
+        "alternateMobileNumber": "string",
+        "officialDocType": "string",
+        "officialDocId": "string",
+        "registeredAddress": "string",
+        "registeredPinCode": "string",
+        "designation": "string",
+        "communicationAddress": "string",
+        "communicationAddressPinCode": "string",
+        "cin": "string",
+        "kin": "string",
+        "partyType": "string",
+        "isIndividual": "string",
+        "signatoryGender": "string",
+        "businessUnit": "string"
+      }
+    ],
+    "neslParties": [
+      {
+        "fullName": "string",
+        "contactPersonName": "string",
+        "contactRelation": "string",
+        "emailId": "string",
+        "mobileNumber": "string",
+        "dob": "string",
+        "legalConstitution": "string",
+        "alternateEmailId": "string",
+        "alternateMobileNumber": "string",
+        "officialDocType": "string",
+        "officialDocId": "string",
+        "registeredAddress": "string",
+        "registeredPinCode": "string",
+        "designation": "string",
+        "communicationAddress": "string",
+        "communicationAddressPinCode": "string",
+        "cin": "string",
+        "kin": "string",
+        "partyType": "string",
+        "isIndividual": "string",
+        "signatoryGender": "string"
+      }
+    ],
+    "neslSecurities": [
+      {
+        "securityDescription": "string",
+        "assetsType": "string",
+        "chargeType": "string",
+        "assetId": "string",
+        "doc": "string",
+        "dov": "string",
+        "cersaiId": "string",
+        "rocChargeId": "string",
+        "securityValue": "string",
+        "abc": "string"
+      }
+    ]
+  },
+  "invitees": [
+    {
+      "name": "string",
+      "email": "string",
+      "phone": "string",
+      "groupId": "string",
+      "groupName": "string",
+      "completionThreshold": "string",
+      "organizationName": "string",
+      "defaultLanguageSelect": "string",
+      "faceMatchImage": "string",
+      "workflowPaymentCollectionConfig": {
+        "amount": "string"
+      },
+      "gpsConfig": {
+        "applyLocationRestriction": false,
+        "allowedLatitude": "string",
+        "allowedLongitude": "string",
+        "permissibleRadius": 0,
+        "applyLocationAccuracy": false,
+        "accuracyThreshold": 0
+      },
+      "aadhaarConfig": {
+        "verifyName": false,
+        "verifySmartName": true,
+        "verifyPincode": "string",
+        "verifyYob": 0,
+        "verifyTitle": "string",
+        "verifyState": "string",
+        "verifyGender": "string"
+      },
+      "offlineSignConfig": {
+        "mobileNumber": "string",
+        "pan": "string",
+        "signerId": "string",
+        "verifyName": false,
+        "verifySmartName": true,
+        "verifyPincode": "string",
+        "verifyState": "string",
+        "verifyYob": 0,
+        "verifyTitle": "string",
+        "verifyGender": "string"
+      },
+      "dscConfig": {
+        "verifyName": false,
+        "verifySmartName": true,
+        "verifyPincode": "string",
+        "verifyState": "string"
+      },
+      "neslConfig": {
+        "verifyName": false,
+        "verifySmartName": true,
+        "verifyPincode": "string",
+        "verifyYob": 0,
+        "verifyTitle": "string",
+        "verifyState": "string",
+        "verifyGender": "string"
+      }
+    }
+  ],
+  "cc": [
+    {
+      "name": "string",
+      "email": "string"
+    }
+  ],
+  "irn": "string"
+}

@@ -1,0 +1,23 @@
+{
+  "status": 0,
+  "messages": [
+    {
+      "code": "string",
+      "message": "string"
+    }
+  ],
+  "data": {
+    "documentId": "string",
+    "irn": "string",
+    "invitees": [
+      {
+        "name": "string",
+        "email": "string",
+        "phone": "string",
+        "signUrl": "string",
+        "active": true,
+        "expiryDate": "string"
+      }
+    ]
+  }
+}
