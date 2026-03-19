@@ -5,7 +5,7 @@
 from __future__ import annotations
 
 from pydantic import BaseModel
-
+from typing import Any
 
 class Field(BaseModel):
     id: str
@@ -24,7 +24,7 @@ class File(BaseModel):
     file: str
     fields: list[Field]
     autoGroupedFieldsFill: bool
-    additionalFiles: None
+    additionalFiles: Any
 
 
 class MultipleStampSery(BaseModel):

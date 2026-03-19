@@ -1,0 +1,386 @@
+{
+    "type": "object",
+    "properties": {
+        "file_name": {
+            "type": "string"
+        },
+        "will_self_sign": {
+            "type": "boolean"
+        },
+        "signatory": {
+            "type": "string"
+        },
+        "expire_in_days": {
+            "type": "integer"
+        },
+        "callback": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "display_on_page": {
+            "type": "string",
+            "enum": [
+                "first",
+                "last",
+                "all",
+                "custom"
+            ]
+        },
+        "sign_coordinates": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "llx": {
+                                "type": "integer"
+                            },
+                            "lly": {
+                                "type": "integer"
+                            },
+                            "urx": {
+                                "type": "integer"
+                            },
+                            "ury": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "llx",
+                            "lly",
+                            "urx",
+                            "ury"
+                        ]
+                    }
+                }
+            }
+        },
+        "notify_signers": {
+            "type": "boolean"
+        },
+        "customer_notification_mode": {
+            "type": "string",
+            "enum": [
+                "SMS",
+                "WHATSAPP",
+                "ALL"
+            ]
+        },
+        "signature_type": {
+            "type": "string",
+            "enum": [
+                "dsc",
+                "aadhaar",
+                "external",
+                "external_sign",
+                "aadhaar_with_dependents",
+                "electronic_with_dependents",
+                "electronic",
+                "document_review"
+            ]
+        },
+        "estamp_request": {
+            "type": "object",
+            "properties": {
+                "tags": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "integer"
+                    }
+                },
+                "note_content": {
+                    "type": "string"
+                },
+                "note_on_page": {
+                    "type": "string",
+                    "enum": [
+                        "first",
+                        "last",
+                        "all",
+                        "custom"
+                    ]
+                },
+                "sign_on_page": {
+                    "type": "string",
+                    "enum": [
+                        "first",
+                        "last",
+                        "all",
+                        "custom"
+                    ]
+                }
+            }
+        },
+        "generate_access_token": {
+            "type": "boolean"
+        },
+        "post_signing_receivers": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "identifier"
+                ]
+            }
+        },
+        "signature_verification": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "abortOnFail": {
+                        "type": "boolean"
+                    },
+                    "maxAttempt": {
+                        "type": "integer"
+                    },
+                    "rules": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "operation": {
+                                    "type": "string",
+                                    "enum": [
+                                        "AND",
+                                        "OR"
+                                    ]
+                                },
+                                "conditions": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "field": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "NAME",
+                                                    "YOB",
+                                                    "AADHAAR",
+                                                    "GENDER"
+                                                ]
+                                            },
+                                            "matchType": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "EXACT",
+                                                    "FUZZY"
+                                                ]
+                                            },
+                                            "value": {
+                                                "type": "string"
+                                            },
+                                            "threshold": {
+                                                "type": "integer"
+                                            },
+                                            "inputValue": {
+                                                "type": "string"
+                                            },
+                                            "fuzzyScore": {
+                                                "type": "integer"
+                                            },
+                                            "multiPropertyRule": {
+                                                "type": "object",
+                                                "additionalProperties": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "field",
+                                            "matchType",
+                                            "value"
+                                        ]
+                                    }
+                                }
+                            },
+                            "required": [
+                                "operation",
+                                "conditions"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "abortOnFail",
+                    "maxAttempt",
+                    "rules"
+                ]
+            }
+        },
+        "signing_condition_request": {
+            "type": "object",
+            "properties": {
+                "conditions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "signingCondition": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "type": {
+                                            "type": "string",
+                                            "enum": [
+                                                "AT_LEAST_N_ACTIONERS",
+                                                "REQUIRED_UNITS"
+                                            ]
+                                        },
+                                        "signers": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "signingPartyId": {
+                                                        "type": "string"
+                                                    },
+                                                    "identifier": {
+                                                        "type": "string"
+                                                    },
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "signingStatus": {
+                                                        "type": "string"
+                                                    },
+                                                    "signedAt": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "identifiers": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "value": {
+                                            "type": "integer"
+                                        },
+                                        "conditionPassed": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "include_authentication_url": {
+            "type": "boolean"
+        },
+        "reference_id": {
+            "type": "string"
+        },
+        "signers": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "type": "string"
+                    },
+                    "reason": {
+                        "type": "string"
+                    },
+                    "sign_type": {
+                        "type": "string",
+                        "enum": [
+                            "dsc",
+                            "aadhaar",
+                            "external",
+                            "external_sign",
+                            "aadhaar_with_dependents",
+                            "electronic_with_dependents",
+                            "electronic",
+                            "document_review"
+                        ]
+                    },
+                    "signature_mode": {
+                        "type": "string",
+                        "enum": [
+                            "otp",
+                            "slate",
+                            "kyc",
+                            "otp_certified",
+                            "slate_certified",
+                            "esign_3",
+                            "esign_3s",
+                            "nesl_aadhaar_sign"
+                        ]
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "signer_tag": {
+                        "type": "string"
+                    },
+                    "signing_addons": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": [
+                                        "geo_location",
+                                        "consent"
+                                    ]
+                                },
+                                "performEnrichment": {
+                                    "type": "boolean"
+                                },
+                                "optional": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "type"
+                            ]
+                        }
+                    },
+                    "index": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "identifier"
+                ]
+            }
+        },
+        "sequential": {
+            "type": "boolean"
+        },
+        "send_sign_link": {
+            "type": "boolean"
+        },
+        "file_data": {
+            "type": "string"
+        },
+        "require_full_document_review": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "file_name",
+        "file_data"
+    ]
+}
